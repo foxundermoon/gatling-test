@@ -1,0 +1,78 @@
+buildscript {
+    ext {
+        allProperties = [:]
+        proxyMaven = 'http://jarlib.vvfox.com/public'
+    }
+    repositories {
+        jcenter { url proxyMaven }
+        maven {
+            url "http://clojars.org/repo"
+        }
+        jcenter()
+        mavenCentral()
+    }
+}
+plugins {
+//    id 'org.hidetake.ssh' version '2.5.0'
+    id 'java'
+    id 'idea'
+    id 'scala'
+    id "io.franzbecker.gradle-lombok" version "1.7"
+    id "com.github.lkishalmi.gatling" version "0.3.1"
+}
+
+
+jar {
+    baseName = 'gating'
+    version = '0.1.0'
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    jcenter { url proxyMaven }
+    jcenter()
+    mavenCentral()
+}
+dependencies {
+    compile 'io.gatling.highcharts:gatling-charts-highcharts:2.2.2'
+    compile 'org.scala-lang:scala-compiler:2.11.8'
+    compile 'org.scala-lang:scala-library:2.11.8'
+
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.14'
+}
+
+sourceSets {
+    gatling {
+        scala {
+            srcDir 'src/gatling/scala'
+        }
+        resources {
+            srcDir 'src/gatling/resources'
+        }
+    }
+}
+
+gatling {
+    toolVersion = '2.2.2'
+    logLevel = 'WARN'
+    jvmArgs = ['-server', '-XX:+UseThreadPriorities',
+               '-XX:ThreadPriorityPolicy=42',
+               '-Xms512M', '-Xmx512M', '-Xmn100M',
+               '-XX:+HeapDumpOnOutOfMemoryError',
+               '-XX:+AggressiveOpts',
+               '-XX:+OptimizeStringConcat',
+               '-XX:+UseFastAccessorMethods',
+               '-XX:+UseParNewGC',
+               '-XX:+UseConcMarkSweepGC',
+               '-XX:+CMSParallelRemarkEnabled',
+               '-Djava.net.preferIPv4Stack=true',
+               '-Djava.net.preferIPv6Addresses=false']
+    simulations = {
+        include '**/*Simulation.scala'
+    }
+}
