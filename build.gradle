@@ -62,7 +62,7 @@ gatling {
     logLevel = 'WARN'
     jvmArgs = ['-server', '-XX:+UseThreadPriorities',
                '-XX:ThreadPriorityPolicy=42',
-               '-Xms512M', '-Xmx512M', '-Xmn100M',
+               '-Xms512M', '-Xmx4G', '-Xmn1G',
                '-XX:+HeapDumpOnOutOfMemoryError',
                '-XX:+AggressiveOpts',
                '-XX:+OptimizeStringConcat',
