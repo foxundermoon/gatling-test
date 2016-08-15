@@ -35,7 +35,6 @@ project/plugins/project/
 .scala_dependencies
 .worksheet
 ### Java template
-*.class
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
