@@ -4,6 +4,7 @@
 build/
 script/
 .idea/
+report/
 
 # Ignore Gradle GUI config
 gradle-app.setting
