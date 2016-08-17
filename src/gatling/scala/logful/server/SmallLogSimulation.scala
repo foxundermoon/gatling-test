@@ -19,13 +19,13 @@ class SmallLogSimulation extends Simulation {
 
 	val mapper = new ObjectMapper()
 
-	val users = 10000
+	val users = 100000
 //	val users = 1
 
     def genHeader : Map[String, String] = {
-    	var fid = UUID.randomUUID.toString.replace("-", "").toLowerCase
+			val fid = UUID.randomUUID.toString.replace("-", "").toLowerCase
 
-    	var map = new java.util.HashMap[String, Object]()
+			val map = new java.util.HashMap[String, Object]()
 	    map.put("uid", "08a0e07727c744cfb1685e5ca9d44890")
 	    map.put("bid", "com.getui.logful.sample")
 	    map.put("sum", "220a3b3399689c37d7badb79b981c81c")
@@ -34,11 +34,11 @@ class SmallLogSimulation extends Simulation {
 	    map.put("plt", new Integer(1))
 	    map.put("fid", fid)
 
-	    var writer = new StringWriter
+	    val writer = new StringWriter
 	    mapper.writeValue(writer, map)
-	    var extra = writer.toString()
+	    val extra = writer.toString()
 
-	    var xExtra = Base64.getEncoder.encodeToString(extra.getBytes(StandardCharsets.UTF_8))
+	    val xExtra = Base64.getEncoder.encodeToString(extra.getBytes(StandardCharsets.UTF_8))
 
 	    return Map("Charsert" -> "UTF-8", "X-EXTRA" -> xExtra)
     }
