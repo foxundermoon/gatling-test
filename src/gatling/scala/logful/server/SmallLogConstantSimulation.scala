@@ -22,7 +22,7 @@ class SmallLogConstantSimulation extends Simulation {
 
   val mapper = new ObjectMapper()
 
-  val users = 70000
+  val users = 1000 *70
 
   def genHeader: Map[String, String] = {
     val fid = UUID.randomUUID.toString.replace("-", "").toLowerCase
@@ -59,5 +59,5 @@ class SmallLogConstantSimulation extends Simulation {
       .check(status.is(202))
     )
 
-  setUp(scn.inject(constantUsersPerSec(1000).during(new FiniteDuration(1, TimeUnit.DAYS))).protocols(httpProtocol))
+  setUp(scn.inject(constantUsersPerSec(1000).during(new FiniteDuration(1, TimeUnit.MINUTES))).protocols(httpProtocol))
 }
