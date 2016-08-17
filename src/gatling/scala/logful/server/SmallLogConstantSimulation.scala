@@ -22,7 +22,7 @@ class SmallLogConstantSimulation extends Simulation {
 
   val mapper = new ObjectMapper()
 
-  val users = 60100
+  val users = 70000
 
   def genHeader: Map[String, String] = {
     val fid = UUID.randomUUID.toString.replace("-", "").toLowerCase
