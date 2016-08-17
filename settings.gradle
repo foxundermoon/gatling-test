@@ -1,0 +1,6 @@
+pluginRepositories {
+    maven {
+        url 'http://jarlib.vvfox.com/public'
+    }
+    gradlePluginPortal()
+}
