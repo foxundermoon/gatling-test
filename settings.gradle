@@ -3,4 +3,7 @@ pluginRepositories {
         url 'http://jarlib.vvfox.com/public'
     }
     gradlePluginPortal()
+    maven {
+        url 'https://plugins.gradle.org/m2'
+    }
 }
