@@ -9,7 +9,7 @@ import scala.concurrent.duration.FiniteDuration
 class SmallLogRampUserPerSecSimulation extends Simulation {
 
   val from = 100
-  val to = 1500
+  val to = 1300
   val time = 60
   val during = new FiniteDuration(time, TimeUnit.SECONDS)
 
