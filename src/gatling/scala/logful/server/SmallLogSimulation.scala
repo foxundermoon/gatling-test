@@ -5,6 +5,7 @@ import io.gatling.core.Predef._
 
 
 class SmallLogSimulation extends Simulation {
-  val c = new  LogFileReqConfig(1000)
+  val users = 40000
+  val c = new LogFileReqConfig(users)
   setUp(c.scn.inject(atOnceUsers(c.users)).protocols(c.httpProtocol))
 }
