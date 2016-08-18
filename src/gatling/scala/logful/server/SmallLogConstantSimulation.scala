@@ -13,7 +13,7 @@ class SmallLogConstantSimulation extends Simulation {
 
   val second = during.toSeconds
 
-  val c = new LogFileReqConfig(usersPerSec * during.toSeconds)
+  val c = new LogFileReqConfig((usersPerSec * during.toSeconds).toInt)
 
   setUp(c.scn.inject(constantUsersPerSec(usersPerSec).during(during)).protocols(c.httpProtocol))
 }

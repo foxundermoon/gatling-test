@@ -11,7 +11,7 @@ import io.gatling.http.Predef._
 /**
   * Created by fox on 8/18/16.
   */
-class LogFileReqConfig(val users:Long) {
+class LogFileReqConfig(val users:Int) {
   val httpProtocol = http
     .baseURL("http://192.168.10.56:9610")
     .inferHtmlResources()
