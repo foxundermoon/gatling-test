@@ -16,5 +16,5 @@ class SmallLogRampUserPerSecSimulation extends Simulation {
   val second = during.toSeconds
   val c = new LogFileReqConfig((0.6 * ((from + to) * time)).toInt)
 
-  setUp(c.scn.inject(rampUsersPerSec(10) to 2000 during during).protocols(c httpProtocol))
+  setUp(c.scn.inject(rampUsersPerSec(from) to to during during).protocols(c httpProtocol))
 }
