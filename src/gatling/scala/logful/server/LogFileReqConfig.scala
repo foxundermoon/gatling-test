@@ -13,12 +13,12 @@ import io.gatling.http.Predef._
   */
 class LogFileReqConfig(val users:Int) {
   val httpProtocol = http
-//    .baseURL("http://192.168.10.56:9610")
-    .baseURL("http://127.0.0.1:9600")
+    .baseURL("http://192.168.10.66:9600")
+//    .baseURL("http://127.0.0.1:9600")
     .inferHtmlResources()
     .acceptHeader("*/*")
     .authorizationHeader("bearer 5c9e834e-a233-4c0a-a166-ea8a7dac8e24")
-    .contentTypeHeader("multipart/form-data; boundary=------------------------f7f5c1d4698a67b8")
+    .contentTypeHeader("multipart/form-data; boundary=------------------------7c66cf4f3ba799a3")
 
   val mapper = new ObjectMapper()
 
