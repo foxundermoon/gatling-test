@@ -17,8 +17,8 @@ class LogFileReqConfig(val users:Int) {
 //    .baseURL("http://127.0.0.1:9600")
     .inferHtmlResources()
     .acceptHeader("*/*")
-    .authorizationHeader("bearer 5c9e834e-a233-4c0a-a166-ea8a7dac8e24")
-    .contentTypeHeader("multipart/form-data; boundary=------------------------7c66cf4f3ba799a3")
+    .authorizationHeader("bearer 4accb24d-729c-47a2-8a28-49d507da3771")
+    .contentTypeHeader("multipart/form-data; boundary=------------------------b83ee7b4869ff609")
 
   val mapper = new ObjectMapper()
 
@@ -28,7 +28,7 @@ class LogFileReqConfig(val users:Int) {
     val map = new java.util.HashMap[String, Object]()
     map.put("uid", "9941dda1623c4170b8fab36e0c447596")
     map.put("bid", "com.getui.logful.sample")
-    map.put("sum", "1730ba0514a8e8c4d247ec145a209da2")
+    map.put("sum", "bc84c286c4d53b6a4d843ca288292329")
     map.put("aid", "57b56c5045ce1a6089f81d84")
     map.put("ver", "0.4.2")
     map.put("plt", new Integer(1))
