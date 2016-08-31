@@ -1,4 +1,4 @@
-package logful.server
+package logful.server.config
 
 import java.io.StringWriter
 import java.nio.charset.StandardCharsets

@@ -3,6 +3,7 @@ package logful.server
 import java.util.concurrent.TimeUnit
 
 import io.gatling.core.Predef._
+import logful.server.config.LogFileReqConfig
 
 import scala.concurrent.duration.FiniteDuration
 

@@ -2,6 +2,7 @@ package logful.server
 
 import io.gatling.charts.stats.LogFileReader
 import io.gatling.core.Predef._
+import logful.server.config.LogFileReqConfig
 
 
 class SmallLogSimulation extends Simulation {
