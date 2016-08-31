@@ -13,7 +13,7 @@ import scala.concurrent.duration.FiniteDuration
 class BothWeedAndGraylogSimulation extends Simulation {
   val from = 100
   val to = 2000
-  val time = 5 * 60
+  val time = 1 * 60
 
   val during = new FiniteDuration(time, TimeUnit.SECONDS)
   val second = during.toSeconds

@@ -12,8 +12,8 @@ import scala.concurrent.duration.FiniteDuration
   */
 class DebugLogSimulation extends Simulation {
   val from = 100
-  val to = 4000
-  val time = 5 * 60
+  val to = 3000
+  val time = 1 * 60
 
   val during = new FiniteDuration(time, TimeUnit.SECONDS)
   val second = during.toSeconds
